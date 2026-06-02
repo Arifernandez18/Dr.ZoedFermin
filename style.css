@@ -60,13 +60,15 @@ img {
 }
 
 .brand-mark {
+    display: grid;
     width: 54px;
     height: 54px;
+    place-items: center;
     border: 1px solid var(--gold);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.8);
-    object-fit: contain;
-    padding: 4px;
+    color: var(--gold);
+    font-family: "Aptos Display", "Segoe UI", sans-serif;
+    font-weight: 800;
 }
 
 .brand strong,
@@ -80,7 +82,6 @@ img {
     color: var(--ink);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.08rem;
-    font-style: italic;
     font-weight: 500;
     letter-spacing: 0.06em;
 }
@@ -125,7 +126,6 @@ img {
 
 .nav-cta,
 .email-button,
-.instagram-button,
 .curriculum button,
 .reveal-sensitive {
     display: inline-flex;
@@ -150,7 +150,6 @@ img {
 
 .nav-cta:hover,
 .email-button:hover,
-.instagram-button:hover,
 .curriculum button:hover,
 .reveal-sensitive:hover {
     transform: translateY(-2px);
@@ -232,11 +231,6 @@ img {
     cursor: pointer;
 }
 
-.instagram-button {
-    gap: 8px;
-    background: linear-gradient(135deg, #d98da0, #b95f78);
-}
-
 .dropdownwhats {
     display: none;
     position: absolute;
@@ -303,21 +297,6 @@ img {
     object-fit: cover;
     object-position: center 28%;
     box-shadow: var(--shadow);
-}
-
-.hero-photo .hero-logo {
-    position: absolute;
-    top: -18px;
-    left: -22px;
-    z-index: 3;
-    width: 132px;
-    height: 132px;
-    padding: 12px;
-    border: 1px solid rgba(201, 154, 69, 0.62);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.86);
-    object-fit: contain;
-    box-shadow: 0 18px 44px rgba(116, 59, 77, 0.22);
 }
 
 .photo-badge {
@@ -466,7 +445,7 @@ main {
 .collage-orb {
     top: 42%;
     left: 0;
-    width: 36%;
+    width: 45%;
     aspect-ratio: 1;
     border: 8px solid rgba(255, 247, 249, 0.92);
     border-radius: 50%;
@@ -707,103 +686,6 @@ figcaption {
     text-align: center;
 }
 
-.site-footer {
-    padding: 46px clamp(24px, 6vw, 78px) 22px;
-    border-top: 1px solid rgba(201, 154, 69, 0.22);
-    background:
-        linear-gradient(rgba(255, 247, 249, 0.88), rgba(255, 247, 249, 0.9)),
-        url("marble-rose-gold-5.png");
-    background-size: cover;
-}
-
-.footer-main {
-    display: grid;
-    grid-template-columns: minmax(260px, 1.25fr) repeat(3, minmax(160px, 0.7fr));
-    gap: 34px;
-    align-items: start;
-}
-
-.footer-brand {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-}
-
-.footer-brand img {
-    width: 82px;
-    height: 82px;
-    padding: 5px;
-    border: 1px solid var(--gold);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.78);
-    object-fit: contain;
-}
-
-.footer-brand strong,
-.footer-brand span {
-    display: block;
-}
-
-.footer-brand strong {
-    color: var(--ink);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: 500;
-}
-
-.footer-brand span,
-.footer-info p {
-    margin: 0;
-    color: #6f5660;
-}
-
-.footer-brand p {
-    max-width: 270px;
-    margin: 10px 0 0;
-    color: #6f5660;
-}
-
-.site-footer h4 {
-    margin: 0 0 14px;
-    color: var(--rose);
-    font-size: 0.82rem;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.site-footer a {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--ink);
-    text-decoration: none;
-}
-
-.site-footer p {
-    margin: 0 0 8px;
-}
-
-.footer-info a {
-    color: var(--rose);
-    font-weight: 800;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: center;
-    margin-top: 34px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(201, 154, 69, 0.2);
-}
-
-.footer-bottom small {
-    color: var(--gold);
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
 @media (max-width: 980px) {
     .main-nav {
         display: none;
@@ -861,19 +743,7 @@ figcaption {
     .whatsdropdown,
     .whatsapp,
     .email-button,
-    .instagram-button,
     .curriculum button {
         width: 100%;
-    }
-
-    .hero-photo .hero-logo {
-        width: 96px;
-        height: 96px;
-        top: -10px;
-        left: -8px;
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr;
     }
 }
